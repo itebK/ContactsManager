@@ -1,0 +1,23 @@
+<div class="container spacer">
+  <div class="form-group">
+    <label>Mot clé</label>
+    <input type="text" [(ngModel)]="motCle">
+    <button class="btn btn-primary" (click)="search()">search</button>
+  </div>
+  <h2>Liste des contacts</h2>
+  <table class="table table-striped">
+    <tr>
+      <th>ID</th>
+      <th>NOM</th>
+      <th>PRENOM</th>
+      <th>EMAIL</th>
+    </tr>
+    <tr *ngFor="let con of pageContacts?.content">
+      <td>{{con.id}}</td>
+      <td>{{con.nom}}</td>
+      <td>{{con.prenom}}</td>
+      <td>{{con.email}}</td>
+    </tr>
+  </table>
+
+</div>
